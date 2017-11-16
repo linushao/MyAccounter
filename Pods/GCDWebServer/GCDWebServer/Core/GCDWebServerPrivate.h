@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  it as a logging facility.
  */
 
-#elif defined(__has_include) && __has_include("CocoaLumberjack/CocoaLumberjack.h")
+//#elif defined(__has_include) && __has_include("CocoaLumberjack/CocoaLumberjack.h")
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
 

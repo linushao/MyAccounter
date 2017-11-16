@@ -18,10 +18,12 @@
 
 
 #import "HomeViewController.h"
+#import "CTMediator+AddPayListActions.h"
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -35,6 +37,7 @@
 }
 
 
+#pragma mark - 初始化UI界面
 - (void)setupUI
 {
     [self addNavBarItem];
@@ -82,7 +85,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.dataArray.count;
 }
 
 
@@ -96,8 +99,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
-    cell.textLabel.text = @"aaa";
-    
     return cell;
 }
 
@@ -107,9 +108,21 @@
 }
 
 
-#pragma mark - action
+#pragma mark - 初始化各种UI事件
 - (void)navAddItemEvent:(id)sender
 {
+    UIViewController *viewController = [[CTMediator sharedInstance] mediator_AddPayListViewControllerWithParams:nil];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+
+#pragma mark - setting
+- (void)setDataArray:(NSMutableArray *)dataArray
+{
+    if (!self.dataArray) {
+        self.dataArray = [NSMutableArray array];
+    }
     
 }
 

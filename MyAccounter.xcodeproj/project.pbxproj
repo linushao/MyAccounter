@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B13644E1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */; };
 		0B1B4C321FBAA40F001E7450 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B4C311FBAA40F001E7450 /* main.m */; };
 		0B1B4C401FBAA410001E7450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1B4C3E1FBAA410001E7450 /* LaunchScreen.storyboard */; };
 		0BB912B51FBC42FB002829D8 /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912AD1FBC42FB002829D8 /* TabbarViewController.m */; };
@@ -19,6 +20,10 @@
 		0BB912D21FBD271F002829D8 /* CTMediator+SettingActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912CC1FBD271F002829D8 /* CTMediator+SettingActions.m */; };
 		0BB912D31FBD271F002829D8 /* Target_Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912CE1FBD271F002829D8 /* Target_Setting.m */; };
 		0BB912DE1FBD30B8002829D8 /* MyAccounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912DD1FBD30B8002829D8 /* MyAccounterTests.m */; };
+		0BB912E61FBD33AC002829D8 /* HelloSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912E51FBD33AC002829D8 /* HelloSpec.m */; };
+		0BB912F21FBD4386002829D8 /* AddPayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912EA1FBD4385002829D8 /* AddPayListViewController.m */; };
+		0BB912F31FBD4386002829D8 /* CTMediator+AddPayListActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912ED1FBD4385002829D8 /* CTMediator+AddPayListActions.m */; };
+		0BB912F41FBD4386002829D8 /* Target_AddPayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912EF1FBD4385002829D8 /* Target_AddPayList.m */; };
 		0BEC3D341FBABB0E005CC0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC3D2B1FBABB0E005CC0A7 /* Assets.xcassets */; };
 		0BEC3D351FBABB0E005CC0A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC3D311FBABB0E005CC0A7 /* AppDelegate.m */; };
 		0BEC3D3B1FBABB62005CC0A7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC3D391FBABB62005CC0A7 /* Info.plist */; };
@@ -39,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B13644C1FBD62A9006439A0 /* AppDelegate+UnitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UnitTestViewController.h"; sourceTree = "<group>"; };
+		0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UnitTestViewController.m"; sourceTree = "<group>"; };
 		0B1B4C2D1FBAA40F001E7450 /* MyAccounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAccounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1B4C311FBAA40F001E7450 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B1B4C3F1FBAA410001E7450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +71,14 @@
 		0BB912DB1FBD30B7002829D8 /* MyAccounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAccounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB912DD1FBD30B8002829D8 /* MyAccounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAccounterTests.m; sourceTree = "<group>"; };
 		0BB912DF1FBD30B8002829D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB912E51FBD33AC002829D8 /* HelloSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloSpec.m; sourceTree = "<group>"; };
+		0BB912E91FBD4385002829D8 /* AddPayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPayListViewController.h; sourceTree = "<group>"; };
+		0BB912EA1FBD4385002829D8 /* AddPayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPayListViewController.m; sourceTree = "<group>"; };
+		0BB912EC1FBD4385002829D8 /* CTMediator+AddPayListActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+AddPayListActions.h"; sourceTree = "<group>"; };
+		0BB912ED1FBD4385002829D8 /* CTMediator+AddPayListActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+AddPayListActions.m"; sourceTree = "<group>"; };
+		0BB912EE1FBD4385002829D8 /* Target_AddPayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_AddPayList.h; sourceTree = "<group>"; };
+		0BB912EF1FBD4385002829D8 /* Target_AddPayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_AddPayList.m; sourceTree = "<group>"; };
+		0BEBAA0F1FBD8797002D5A12 /* PayListKeyHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayListKeyHeader.h; sourceTree = "<group>"; };
 		0BEC3D2B1FBABB0E005CC0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEC3D301FBABB0E005CC0A7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0BEC3D311FBABB0E005CC0A7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,6 +115,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B13644B1FBD6110006439A0 /* ViewControllerUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllerUnitTest;
+			sourceTree = "<group>";
+		};
 		0B1B4C241FBAA40F001E7450 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +145,8 @@
 		0B1B4C2F1FBAA40F001E7450 /* MyAccounter */ = {
 			isa = PBXGroup;
 			children = (
+				0BEBAA0B1FBD85DC002D5A12 /* Marco */,
+				0B13644B1FBD6110006439A0 /* ViewControllerUnitTest */,
 				0BEC3D2F1FBABB0E005CC0A7 /* AppInit */,
 				0BEC3D291FBABB0E005CC0A7 /* Utilities */,
 				0BEC3D2A1FBABB0E005CC0A7 /* Resources */,
@@ -285,8 +309,62 @@
 			children = (
 				0BB912DD1FBD30B8002829D8 /* MyAccounterTests.m */,
 				0BB912DF1FBD30B8002829D8 /* Info.plist */,
+				0BB912E51FBD33AC002829D8 /* HelloSpec.m */,
 			);
 			path = MyAccounterTests;
+			sourceTree = "<group>";
+		};
+		0BB912E71FBD4385002829D8 /* AddPayList */ = {
+			isa = PBXGroup;
+			children = (
+				0BB912E81FBD4385002829D8 /* Controllers */,
+				0BB912EB1FBD4385002829D8 /* Mediator */,
+				0BB912F01FBD4385002829D8 /* Models */,
+				0BB912F11FBD4385002829D8 /* Views */,
+			);
+			path = AddPayList;
+			sourceTree = "<group>";
+		};
+		0BB912E81FBD4385002829D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BB912E91FBD4385002829D8 /* AddPayListViewController.h */,
+				0BB912EA1FBD4385002829D8 /* AddPayListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0BB912EB1FBD4385002829D8 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				0BB912EC1FBD4385002829D8 /* CTMediator+AddPayListActions.h */,
+				0BB912ED1FBD4385002829D8 /* CTMediator+AddPayListActions.m */,
+				0BB912EE1FBD4385002829D8 /* Target_AddPayList.h */,
+				0BB912EF1FBD4385002829D8 /* Target_AddPayList.m */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
+		0BB912F01FBD4385002829D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0BB912F11FBD4385002829D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BEBAA0B1FBD85DC002D5A12 /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				0BEBAA0F1FBD8797002D5A12 /* PayListKeyHeader.h */,
+			);
+			path = Marco;
 			sourceTree = "<group>";
 		};
 		0BEC3D291FBABB0E005CC0A7 /* Utilities */ = {
@@ -315,6 +393,7 @@
 		0BEC3D2D1FBABB0E005CC0A7 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				0BB912E71FBD4385002829D8 /* AddPayList */,
 				0BB912C61FBD271F002829D8 /* Setting */,
 				0BB912B81FBD218E002829D8 /* Home */,
 				0BB912AA1FBC42FB002829D8 /* Tabbar */,
@@ -335,6 +414,8 @@
 			children = (
 				0BEC3D301FBABB0E005CC0A7 /* AppDelegate.h */,
 				0BEC3D311FBABB0E005CC0A7 /* AppDelegate.m */,
+				0B13644C1FBD62A9006439A0 /* AppDelegate+UnitTestViewController.h */,
+				0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */,
 			);
 			path = AppInit;
 			sourceTree = "<group>";
@@ -604,7 +685,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB912F31FBD4386002829D8 /* CTMediator+AddPayListActions.m in Sources */,
 				0BEC3D351FBABB0E005CC0A7 /* AppDelegate.m in Sources */,
+				0BB912F21FBD4386002829D8 /* AddPayListViewController.m in Sources */,
+				0B13644E1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m in Sources */,
+				0BB912F41FBD4386002829D8 /* Target_AddPayList.m in Sources */,
 				0BB912B61FBC42FB002829D8 /* CTMediator+TabbarActions.m in Sources */,
 				0BEC3D461FBAC4EC005CC0A7 /* CTMediator.m in Sources */,
 				0BB912B51FBC42FB002829D8 /* TabbarViewController.m in Sources */,
@@ -625,6 +710,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BB912DE1FBD30B8002829D8 /* MyAccounterTests.m in Sources */,
+				0BB912E61FBD33AC002829D8 /* HelloSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

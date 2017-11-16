@@ -13,7 +13,7 @@ target 'MyAccounter' do
   pod 'MJRefresh', '~> 3.1.12'
   pod 'IQKeyboardManager', '~> 4.0.11'
   pod 'ZYCornerRadius', '~> 1.0.2'
-#  pod 'CocoaLumberjack', '~> 3.2.0'
+  pod 'CocoaLumberjack', '~> 3.2.0'
 
   pod 'PNChart', '~> 0.8.9'
   

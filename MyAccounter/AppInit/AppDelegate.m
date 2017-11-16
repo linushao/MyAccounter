@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "CTMediator.h"
 
+#import "AppDelegate+UnitTestViewController.h"
+
 #import "BaseViewController.h"
 #import "TabbarViewController.h"
 
@@ -28,10 +30,17 @@
     self.window.backgroundColor = [UIColor whiteColor];
     TabbarViewController *_tabbarvc =[[TabbarViewController alloc] init];
     
-//    _nav = [[UINavigationController alloc] initWithRootViewController:_tabbarvc];
-    
     [self.window setRootViewController:_tabbarvc];
     [self.window makeKeyAndVisible];
+    
+    
+#if DEBUG
+//    [self unitTestAddPayListViewController];
+#endif
+    
+    
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     
     return YES;
 }
