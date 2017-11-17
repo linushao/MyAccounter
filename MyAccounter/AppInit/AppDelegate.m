@@ -35,7 +35,8 @@
     
     
 #if DEBUG
-//    [self unitTestAddPayListViewController];
+//    [self unitTestHomeViewController];
+    [self unitTestAddPayListViewController];
 #endif
     
     

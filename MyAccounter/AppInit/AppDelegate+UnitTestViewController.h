@@ -7,11 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 #import "AddPayListViewController.h"
 
 @interface AppDelegate (UnitTestViewController)
 
 //- (void)unitTest<#ViewController#>;
+
+- (void)unitTestHomeViewController;
 - (void)unitTestAddPayListViewController;
 
 @end

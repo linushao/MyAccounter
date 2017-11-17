@@ -22,6 +22,7 @@
 #import <YYCache.h>
 
 #import "PayListKeyHeader.h"
+#import "CTMediator+HomeActions.h"
 
 @interface AddPayListViewController ()
 
@@ -151,6 +152,7 @@
 #pragma mark - 初始化各种UI事件
 - (void)saveDataEvent:(id)btn
 {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

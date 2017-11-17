@@ -20,6 +20,11 @@ NSString * const kCTMediatorActionTo_HomeViewController = @"ToHomeViewController
                        shouldCacheTarget:YES];
 
     if ([viewController isKindOfClass:[UIViewController class]]) {
+//        if ([dict.allKeys containsObject:@"update"]) {
+//            UITableView *table = [viewController valueForKey:@"tableView"];
+//            [table reloadData];
+//        }
+        
         return viewController;
     } else {
         NSLog(@"%@ 未能实例化页面", NSStringFromSelector(_cmd));

@@ -6,7 +6,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "PayDataModel.h"
+
 
 @interface HomeViewController : BaseViewController
+
+@property (nonatomic, copy) NSMutableArray *dataArray;
 
 @end

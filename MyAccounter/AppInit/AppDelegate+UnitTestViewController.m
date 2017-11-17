@@ -10,9 +10,22 @@
 #import <YYCategories.h>
 #import <YYModel.h>
 
+#import "PayDataModel.h"
+
 @implementation AppDelegate (UnitTestViewController)
 
 #pragma mark - 单元测试ViewController
+- (void)unitTestHomeViewController
+{
+    HomeViewController *vc = [[HomeViewController alloc] init];
+    
+    id data = [self readJsonWithName:@"PayDataModelJson"];
+    vc.dataArray = [NSMutableArray arrayWithArray:data];
+    
+    [self setupWindowRootViewController:vc];
+}
+
+
 - (void)unitTestAddPayListViewController
 {
     AddPayListViewController *vc = [[AddPayListViewController alloc] init];
@@ -48,7 +61,7 @@
 {
     NSString *jsonStr = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:jsonName ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
     
-    id data = [jsonStr yy_modelToJSONObject];
+    id data = [jsonStr jsonValueDecoded];
     
     return data;
 }

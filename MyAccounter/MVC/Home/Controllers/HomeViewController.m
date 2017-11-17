@@ -19,11 +19,12 @@
 
 #import "HomeViewController.h"
 #import "CTMediator+AddPayListActions.h"
+#import "PayDataModel.h"
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
+//@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -96,7 +97,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        
+        id dic = self.dataArray[indexPath.row];
+        PayDataModel *model = [PayDataModel yy_modelWithDictionary:dic];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%.2f元", model.payPrince];
+        cell.detailTextLabel.text = model.payDetail;
     }
     
     return cell;
@@ -118,12 +125,12 @@
 
 
 #pragma mark - setting
-- (void)setDataArray:(NSMutableArray *)dataArray
-{
-    if (!self.dataArray) {
-        self.dataArray = [NSMutableArray array];
-    }
-    
-}
+//- (void)setDataArray:(NSMutableArray *)dataArray
+//{
+//    if (!self.dataArray) {
+//        self.dataArray = [NSMutableArray array];
+//    }
+//
+//}
 
 @end
