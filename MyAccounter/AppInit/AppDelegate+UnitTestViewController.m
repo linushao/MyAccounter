@@ -34,6 +34,14 @@
 }
 
 
+- (void)unitTestChoosePayTypeListViewController
+{
+    ChoosePayTypeViewController *vc = [[ChoosePayTypeViewController alloc] init];
+    
+    [self setupWindowRootViewController:vc];
+}
+
+
 #pragma mark - 初始化VC，有导航栏
 - (void)setupWindowRootViewController:(UIViewController *)vc
 {

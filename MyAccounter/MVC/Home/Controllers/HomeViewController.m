@@ -100,10 +100,26 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
         
         id dic = self.dataArray[indexPath.row];
-        PayDataModel *model = [PayDataModel yy_modelWithDictionary:dic];
+        //PayDataModel *model = [PayDataModel yy_modelWithDictionary:dic];
         
-        cell.textLabel.text = [NSString stringWithFormat:@"%.2f元", model.payPrince];
-        cell.detailTextLabel.text = model.payDetail;
+        
+        PayDataModel *model = [PayDataModel MR_createEntity];
+        
+        model.payPrince = 12.34;
+//        [model mj_setKeyValues:dic];
+        
+        [[NSManagedObjectContext MR_defaultContext] MR_saveWithBlock:^(NSManagedObjectContext * _Nonnull localContext) {
+            DLOG_METHOD;
+        }];
+        
+//        NSManagedObjectContext *context = nil;
+//        
+//        PayDataModel *model = [PayDataModel mj_objectWithKeyValues:dic context:context];
+//        
+//        [context save:nil];
+        
+//        cell.textLabel.text = [NSString stringWithFormat:@"%.2f元", model.payPrince];
+//        cell.detailTextLabel.text = model.payDetail;
     }
     
     return cell;

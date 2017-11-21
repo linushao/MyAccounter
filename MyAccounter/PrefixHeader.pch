@@ -12,18 +12,44 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import <CocoaLumberjack.h>
+//#import <CocoaLumberjack.h>
+
+//#ifdef DEBUG
+//
+//static const int ddLogLevel = DDLogLevelVerbose;
+//
+//#else
+//
+//static const int ddLogLevel = DDLogLevelWarning;
+//
+//#endif
+
+
+
+
 #import <Masonry.h>
 #import <YYCategories.h>
+#import <MagicalRecord/MagicalRecord.h>
+
+#import "NotificationKeyHeader.h"
+
+
+
+#pragma mark - 测试用宏定义
 
 #ifdef DEBUG
+#define DLOG(...)     NSLog(@"%@",__VA_ARGS__);
+#define DDetailLog(format, ...) NSLog(@"%s(%d): " format, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
-static const int ddLogLevel = DDLogLevelVerbose;
-
+#define DLOG_METHOD   NSLog(@"%s", __func__);
+#define DLOG_LINE(fmt, ...) NSLog((@"%s [Line %d]>> " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DLOG_CALLER   DLOG_LINE(@"Origin Caller: [%@]", [[[[NSThread callStackSymbols] objectAtIndex:1] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"[]"]] objectAtIndex:1])
 #else
-
-static const int ddLogLevel = DDLogLevelWarning;
-
+#define DLOG(...);
+#define DDetailLog(format, ...);
+#define DLOG_METHOD;
+#define DLOG_LINE(fmt, ...);
+#define DLOG_CALLER
 #endif
 
 

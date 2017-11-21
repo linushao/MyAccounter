@@ -6,6 +6,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import <MJExtension.h>
+#import "PayDataModel.h"
 
 @interface AddPayListViewController : BaseViewController
 

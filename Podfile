@@ -13,7 +13,9 @@ target 'MyAccounter' do
   pod 'MJRefresh', '~> 3.1.12'
   pod 'IQKeyboardManager', '~> 4.0.11'
   pod 'ZYCornerRadius', '~> 1.0.2'
-  pod 'CocoaLumberjack', '~> 3.2.0'
+  pod 'MagicalRecord', '~> 2.3.2'
+  pod 'MJExtension', '~> 3.0.13'
+#  pod 'CocoaLumberjack', '~> 3.2.0'
 
   pod 'PNChart', '~> 0.8.9'
   
@@ -21,7 +23,7 @@ target 'MyAccounter' do
   pod 'YYModel', '~> 1.0.4'
   pod 'YYCategories', '~> 1.0.4'
   
-  pod 'GCDWebServer', '~> 3.4'
+  pod 'GCDWebServer', '~> 3.4.1'
   pod 'GCDWebServer/WebUploader', '~> 3.4'
 
 end

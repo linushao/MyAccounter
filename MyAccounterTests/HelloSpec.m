@@ -13,7 +13,7 @@ SPEC_BEGIN(HelloSpec)
 describe(@"Team", ^{
     context(@"when newly created", ^{
         it(@"should have a name", ^{
-            [[@"hello" should] equal:@"hello"];
+            [[@"hello9" should] equal:@"hello"];
         });
     });
 });

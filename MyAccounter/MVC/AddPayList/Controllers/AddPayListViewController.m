@@ -23,13 +23,26 @@
 
 #import "PayListKeyHeader.h"
 #import "CTMediator+HomeActions.h"
+#import "CTMediator+ChoosePayTypeActions.h"
 
-@interface AddPayListViewController ()
+#import "NumKeyboardView.h"
+#import "PayTypeControl.h"
+
+#import "SaveCacheManager.h"
+#import "PayDataModel.h"
+
+@interface AddPayListViewController ()<UITextFieldDelegate, NumKeyboardViewDelegate>
 
 @property (nonatomic, strong) UITextField *priceTextField;
 @property (nonatomic, strong) UITextField *detailTextField;
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIButton *sureButton;
+
+@property (nonatomic, strong) NumKeyboardView *numKeyboardView;
+@property (nonatomic, strong) PayTypeControl *payTypeControl;
+
+
+@property (nonatomic, strong) PayDataModel *payDataModel;
 
 @end
 
@@ -39,19 +52,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(notificateHandler:) name:NotificatePayTypeKey object:nil];
     
     [self setupUI];
+}
+
+
+#pragma mark - 处理Notification
+- (void)notificateHandler:(NSNotification *)notificate
+{
+    if (self.payTypeControl
+        && [notificate.object isKindOfClass:NSString.class]) {
+        self.payTypeControl.descriptionLabel.text = notificate.object;
+    }
 }
 
 
 #pragma mark - 初始化UI界面
 - (void)setupUI
 {
+    if (!self.payDataModel) {
+        self.payDataModel = [[PayDataModel alloc] init];
+    }
+    
     [self addTimeLabel];
     [self addPriceTextField];
     [self addDetailTextField];
     [self addSureButton];
+    [self addNumKeyboardView];
+    [self addPayTypeControl];
 }
 
 - (void)addTimeLabel
@@ -66,7 +96,7 @@
     
     [self.timeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.right.offset(0);
-        make.top.offset(80);
+        make.top.offset(20);
     }];
     
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
@@ -91,10 +121,10 @@
         make.top.mas_equalTo(self.timeLabel.mas_bottom).offset(20);
     }];
     
+
+    self.priceTextField.delegate = self;
     self.priceTextField.borderStyle = UITextBorderStyleRoundedRect;
-    
     self.priceTextField.placeholder = @"价格";
-    
     self.priceTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 }
 
@@ -116,9 +146,7 @@
     
     
     self.detailTextField.borderStyle = UITextBorderStyleRoundedRect;
-    
     self.detailTextField.placeholder = @"详情";
-    
     self.detailTextField.keyboardType = UIKeyboardTypeDefault;
 }
 
@@ -148,11 +176,108 @@
 }
 
 
+- (void)addNumKeyboardView
+{
+    if (!self.numKeyboardView) {
+        self.numKeyboardView = [[NumKeyboardView alloc] init];
+    }
+    
+    if (![self.view isDescendantOfView:self.numKeyboardView]) {
+        [self.view addSubview:self.numKeyboardView];
+    }
+    
+    [self.numKeyboardView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.offset(0);
+        make.height.mas_equalTo(200);
+    }];
+    
+    self.numKeyboardView.delegate = self;
+}
+
+
+- (void)addPayTypeControl
+{
+    @weakify(self);
+    
+    if (!self.payTypeControl) {
+        self.payTypeControl = [[PayTypeControl alloc] init];
+    }
+    
+    if (![self.view isDescendantOfView:self.payTypeControl]) {
+        [self.view addSubview:self.payTypeControl];
+    }
+    
+    [self.payTypeControl mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(0);
+        make.width.mas_equalTo(50);
+        make.height.mas_equalTo(40);
+        make.bottom.mas_equalTo(weak_self.numKeyboardView.mas_top).offset(0);
+    }];
+    
+    
+    [self.payTypeControl addTarget:self action:@selector(choosePayType:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
 
 #pragma mark - 初始化各种UI事件
 - (void)saveDataEvent:(id)btn
 {
+    self.payDataModel.payPrince = [self.priceTextField.text doubleValue];
+    self.payDataModel.payDetail = self.detailTextField.text;
+//    self.payDataModel.updateDate = [NSDate date];
+//    self.payDataModel.writeDate = [NSDate dateWithString:self.timeLabel.text format:@"yyyy年MM月dd日 HH:mm"];
+//    self.payDataModel.payLabel = self.payTypeControl.descriptionLabel.text;
+//    
+//    NSInteger randNum = arc4random();
+//    NSInteger timeInterval = [[NSDate date] timeIntervalSince1970];
+//    
+//    self.payDataModel.payID = randNum;
+//    self.payDataModel.paySaveID = [[NSString stringWithFormat:@"%ld%ld",timeInterval, timeInterval] md5String];
+    
+    
+    DLOG(self.payDataModel);
+    
+    SaveCacheManager *manager = [SaveCacheManager sharedSaveCacheManager];
+    [manager addPayData:self.payDataModel];
+    
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)choosePayType:(id)btn
+{
+    UIViewController *viewController = [[CTMediator sharedInstance] mediator_ChoosePayTypeViewControllerWithParams:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+
+#pragma mark - Delegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return NO;
+}
+
+
+- (void)NumKeyboardViewClickKeyboard:(NSString *)value
+{
+    if ([self.priceTextField.text containsString:@"."]
+        && [value containsString:@"."]) {
+        return;
+    }
+    
+    self.priceTextField.text = [self.priceTextField.text stringByAppendingString:value];
+}
+
+
+- (void)NumKeyboardViewClickSure
+{
+    [self saveDataEvent:nil];
+}
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

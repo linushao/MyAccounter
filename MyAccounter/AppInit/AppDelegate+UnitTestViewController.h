@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "AddPayListViewController.h"
+#import "ChoosePayTypeViewController.h"
 
 @interface AppDelegate (UnitTestViewController)
 
@@ -16,5 +17,6 @@
 
 - (void)unitTestHomeViewController;
 - (void)unitTestAddPayListViewController;
+- (void)unitTestChoosePayTypeListViewController;
 
 @end

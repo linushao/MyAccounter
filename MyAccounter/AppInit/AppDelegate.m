@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CTMediator.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 #import "AppDelegate+UnitTestViewController.h"
 
@@ -26,6 +27,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [MagicalRecord setupAutoMigratingCoreDataStack];
+//    [MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     TabbarViewController *_tabbarvc =[[TabbarViewController alloc] init];
@@ -35,13 +39,14 @@
     
     
 #if DEBUG
-//    [self unitTestHomeViewController];
-    [self unitTestAddPayListViewController];
+    [self unitTestHomeViewController];
+//    [self unitTestAddPayListViewController];
+//    [self unitTestChoosePayTypeListViewController];
 #endif
     
     
-    [DDLog addLogger:[DDASLLogger sharedInstance]];
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+//    [DDLog addLogger:[DDASLLogger sharedInstance]];
+//    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     
     return YES;
 }
@@ -71,6 +76,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    [MagicalRecord cleanUp];
 }
     
     

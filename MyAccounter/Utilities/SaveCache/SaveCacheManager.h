@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <YYCache.h>
+#import <MagicalRecord/MagicalRecord.h>
 
 #import "Singleton.h"
 #import "PayListKeyHeader.h"
@@ -19,7 +20,9 @@ singleton_interface(SaveCacheManager)
 
 - (void)savePayDataArray:(NSArray <PayDataModel *> *)arr;
 - (void)addPayData:(PayDataModel *)model;
-- (void)readPayData:(void (^)(NSArray <PayDataModel *> *arr))completeBlock;
-- (void)deletePayDataByPayID:(NSInteger)payID;
+- (void)readPayData:(void (^)(PayDataModel *model))completeBlock;
+- (void)deletePayDataByPayID:(NSString *)paySaveID;
+
+//+ (void)attempDealloc;
 
 @end

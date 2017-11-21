@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CocoaLumberjack.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GCDWebServer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,7 +29,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MagicalRecord.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -97,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>141CEB7AB2E13A56321CB8DB36E21799</key>
+		<key>395CBB07B2D9BFCFA814AA7F95809FEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,27 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>417EA9844EC286C5B1B8FCB029C00130</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>748E47F2C556E82646A69E0A3AD01530</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>87A7BD4C6C56C06AC50114916E62258A</key>
+		<key>5CE9E527A53FA8F2668E9962C07A053D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>904F4F27FD314010A3812EB2A9306183</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>99CC5C2C71F29BC48E03F017FB413A57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,7 +147,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9D9DCCE5442795D0AD9E99D86389328</key>
+		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A50E0B85AD78C9B6BD5DA0714FA7ED56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,12 +162,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D30E5FE5F8881E34812933A91FCD4E01</key>
+		<key>DA785D96BE7FB2B056D126322FF979AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>EB31A05090143EAF02A3DE187E2CBA22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9751BF4652465B162FCEAA5728BF91C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
