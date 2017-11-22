@@ -28,7 +28,7 @@
     // Override point for customization after application launch.
     
     [MagicalRecord setupAutoMigratingCoreDataStack];
-//    [MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -39,8 +39,8 @@
     
     
 #if DEBUG
-    [self unitTestHomeViewController];
-//    [self unitTestAddPayListViewController];
+//    [self unitTestHomeViewController];
+    [self unitTestAddPayListViewController];
 //    [self unitTestChoosePayTypeListViewController];
 #endif
     

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D30" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="PayData" representedClassName="PayData" syncable="YES" codeGenerationType="class">
+    <entity name="PayDataEntity" representedClassName="PayDataEntity" syncable="YES">
         <attribute name="payDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="payID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="payLabel" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="payPrince" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="paySaveID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="writeDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PayData" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="PayDataEntity" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

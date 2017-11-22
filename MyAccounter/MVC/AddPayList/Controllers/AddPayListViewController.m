@@ -29,7 +29,6 @@
 #import "PayTypeControl.h"
 
 #import "SaveCacheManager.h"
-#import "PayDataModel.h"
 
 @interface AddPayListViewController ()<UITextFieldDelegate, NumKeyboardViewDelegate>
 
@@ -42,7 +41,6 @@
 @property (nonatomic, strong) PayTypeControl *payTypeControl;
 
 
-@property (nonatomic, strong) PayDataModel *payDataModel;
 
 @end
 
@@ -72,10 +70,6 @@
 #pragma mark - 初始化UI界面
 - (void)setupUI
 {
-    if (!self.payDataModel) {
-        self.payDataModel = [[PayDataModel alloc] init];
-    }
-    
     [self addTimeLabel];
     [self addPriceTextField];
     [self addDetailTextField];
@@ -223,25 +217,22 @@
 #pragma mark - 初始化各种UI事件
 - (void)saveDataEvent:(id)btn
 {
-    self.payDataModel.payPrince = [self.priceTextField.text doubleValue];
-    self.payDataModel.payDetail = self.detailTextField.text;
-//    self.payDataModel.updateDate = [NSDate date];
-//    self.payDataModel.writeDate = [NSDate dateWithString:self.timeLabel.text format:@"yyyy年MM月dd日 HH:mm"];
-//    self.payDataModel.payLabel = self.payTypeControl.descriptionLabel.text;
-//    
-//    NSInteger randNum = arc4random();
-//    NSInteger timeInterval = [[NSDate date] timeIntervalSince1970];
-//    
-//    self.payDataModel.payID = randNum;
-//    self.payDataModel.paySaveID = [[NSString stringWithFormat:@"%ld%ld",timeInterval, timeInterval] md5String];
+//    SaveCacheManager *manager = [SaveCacheManager sharedSaveCacheManager];
+//    [manager addPayData:self.payDataModel];
     
+    PayDataEntity *entity = [PayDataEntity MR_createEntity];
     
-    DLOG(self.payDataModel);
+//    [entity mj_setKeyValues:dic];
     
-    SaveCacheManager *manager = [SaveCacheManager sharedSaveCacheManager];
-    [manager addPayData:self.payDataModel];
+    entity.payPrince = [self.priceTextField.text doubleValue];
+    entity.payDetail = self.detailTextField.text;
+    entity.updateDate = [NSDate date];
+    entity.writeDate = [NSDate dateWithString:self.timeLabel.text format:@"yyyy年MM月dd日 HH:mm"];
+    entity.payLabel = self.payTypeControl.descriptionLabel.text;
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 - (void)choosePayType:(id)btn

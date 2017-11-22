@@ -6,7 +6,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "PayDataModel.h"
+
+#import "PayDataEntity+CoreDataProperties.h"
 
 @interface HomeViewController : BaseViewController
 

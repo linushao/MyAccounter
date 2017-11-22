@@ -30,26 +30,25 @@ singleton_implementation(SaveCacheManager)
     return self;
 }
 
-- (void)savePayDataArray:(NSArray <PayDataModel *> *)arr
-{
-//    [arr enumerateObjectsUsingBlock:^(PayDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        [self.cache setObject:obj forKey:obj.paySaveID];
-//    }];
-}
-
-- (void)addPayData:(PayDataModel *)model
-{
-//    [self.cache setObject:model forKey:model.paySaveID];
-}
-
-- (void)readPayData:(void (^)(PayDataModel *model))completeBlock
+//- (void)savePayDataArray:(NSArray <PayDataModel *> *)arr
+//{
+////    [arr enumerateObjectsUsingBlock:^(PayDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+////        [self.cache setObject:obj forKey:obj.paySaveID];
+////    }];
+//}
+//
+- (void)addPayData:(PayDataEntity *)model
 {
 }
-
-- (void)deletePayDataByPayID:(NSInteger)payID
-{
-    
-}
+//
+//- (void)readPayData:(void (^)(PayDataModel *model))completeBlock
+//{
+//}
+//
+//- (void)deletePayDataByPayID:(NSInteger)payID
+//{
+//    
+//}
 
 
 //+ (void)attempDealloc{

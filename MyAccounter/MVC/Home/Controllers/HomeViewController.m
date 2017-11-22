@@ -19,7 +19,6 @@
 
 #import "HomeViewController.h"
 #import "CTMediator+AddPayListActions.h"
-#import "PayDataModel.h"
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -100,23 +99,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
         
         id dic = self.dataArray[indexPath.row];
-        //PayDataModel *model = [PayDataModel yy_modelWithDictionary:dic];
         
         
-        PayDataModel *model = [PayDataModel MR_createEntity];
         
-        model.payPrince = 12.34;
-//        [model mj_setKeyValues:dic];
         
-        [[NSManagedObjectContext MR_defaultContext] MR_saveWithBlock:^(NSManagedObjectContext * _Nonnull localContext) {
-            DLOG_METHOD;
-        }];
-        
-//        NSManagedObjectContext *context = nil;
+//        PayDataEntity *entity = [PayDataEntity MR_createEntity];
 //        
-//        PayDataModel *model = [PayDataModel mj_objectWithKeyValues:dic context:context];
+//        [entity mj_setKeyValues:dic];
 //        
-//        [context save:nil];
+//        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
         
 //        cell.textLabel.text = [NSString stringWithFormat:@"%.2f元", model.payPrince];
 //        cell.detailTextLabel.text = model.payDetail;

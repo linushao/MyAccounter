@@ -29,7 +29,8 @@ static dispatch_once_t onceToken; \
  方法二:
  1. 必须把static dispatch_once_t onceToken; 这个拿到函数体外,成为全局的.
  2.
- +(void)attempDealloc{
+ + (void)attempDealloc
+ {
  onceToken = 0; // 只有置成0,GCD才会认为它从未执行过.它默认为0.这样才能保证下次再次调用shareInstance的时候,再次创建对象.
  [_instance release];
  _instance = nil;

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B07066C1FC52349000DDC7A /* PayDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0706691FC52349000DDC7A /* PayDataEntity+CoreDataClass.m */; };
+		0B07066D1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B07066B1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m */; };
+		0B0706731FC56578000DDC7A /* MyAccounterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B0706711FC56578000DDC7A /* MyAccounterData.xcdatamodeld */; };
+		0B0706791FC57062000DDC7A /* PayDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0706781FC57062000DDC7A /* PayDataModel.m */; };
 		0B13644E1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */; };
 		0B1B4C321FBAA40F001E7450 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B4C311FBAA40F001E7450 /* main.m */; };
 		0B1B4C401FBAA410001E7450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1B4C3E1FBAA410001E7450 /* LaunchScreen.storyboard */; };
@@ -34,7 +38,6 @@
 		0BB912F21FBD4386002829D8 /* AddPayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912EA1FBD4385002829D8 /* AddPayListViewController.m */; };
 		0BB912F31FBD4386002829D8 /* CTMediator+AddPayListActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912ED1FBD4385002829D8 /* CTMediator+AddPayListActions.m */; };
 		0BB912F41FBD4386002829D8 /* Target_AddPayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB912EF1FBD4385002829D8 /* Target_AddPayList.m */; };
-		0BEBAA1F1FBE745F002D5A12 /* PayDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBAA1E1FBE745F002D5A12 /* PayDataModel.m */; };
 		0BEBAA221FBE7601002D5A12 /* PayDataModelJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0BEBAA211FBE7601002D5A12 /* PayDataModelJson.txt */; };
 		0BEC3D341FBABB0E005CC0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC3D2B1FBABB0E005CC0A7 /* Assets.xcassets */; };
 		0BEC3D351FBABB0E005CC0A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC3D311FBABB0E005CC0A7 /* AppDelegate.m */; };
@@ -56,6 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B0706681FC52349000DDC7A /* PayDataEntity+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayDataEntity+CoreDataClass.h"; sourceTree = "<group>"; };
+		0B0706691FC52349000DDC7A /* PayDataEntity+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PayDataEntity+CoreDataClass.m"; sourceTree = "<group>"; };
+		0B07066A1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayDataEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0B07066B1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PayDataEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0B0706721FC56578000DDC7A /* MyAccounterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAccounterData.xcdatamodel; sourceTree = "<group>"; };
+		0B0706771FC57062000DDC7A /* PayDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDataModel.h; sourceTree = "<group>"; };
+		0B0706781FC57062000DDC7A /* PayDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDataModel.m; sourceTree = "<group>"; };
 		0B13644C1FBD62A9006439A0 /* AppDelegate+UnitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UnitTestViewController.h"; sourceTree = "<group>"; };
 		0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UnitTestViewController.m"; sourceTree = "<group>"; };
 		0B1B4C2D1FBAA40F001E7450 /* MyAccounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAccounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,8 +122,6 @@
 		0BB912EE1FBD4385002829D8 /* Target_AddPayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_AddPayList.h; sourceTree = "<group>"; };
 		0BB912EF1FBD4385002829D8 /* Target_AddPayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_AddPayList.m; sourceTree = "<group>"; };
 		0BEBAA0F1FBD8797002D5A12 /* PayListKeyHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayListKeyHeader.h; sourceTree = "<group>"; };
-		0BEBAA1D1FBE745F002D5A12 /* PayDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDataModel.h; sourceTree = "<group>"; };
-		0BEBAA1E1FBE745F002D5A12 /* PayDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDataModel.m; sourceTree = "<group>"; };
 		0BEBAA211FBE7601002D5A12 /* PayDataModelJson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PayDataModelJson.txt; sourceTree = "<group>"; };
 		0BEC3D2B1FBABB0E005CC0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEC3D301FBABB0E005CC0A7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -490,6 +498,7 @@
 		0BEBAA1B1FBE745F002D5A12 /* DataCacheModel */ = {
 			isa = PBXGroup;
 			children = (
+				0B0706711FC56578000DDC7A /* MyAccounterData.xcdatamodeld */,
 				0BEBAA1C1FBE745F002D5A12 /* PayData */,
 			);
 			path = DataCacheModel;
@@ -498,8 +507,12 @@
 		0BEBAA1C1FBE745F002D5A12 /* PayData */ = {
 			isa = PBXGroup;
 			children = (
-				0BEBAA1D1FBE745F002D5A12 /* PayDataModel.h */,
-				0BEBAA1E1FBE745F002D5A12 /* PayDataModel.m */,
+				0B0706681FC52349000DDC7A /* PayDataEntity+CoreDataClass.h */,
+				0B0706691FC52349000DDC7A /* PayDataEntity+CoreDataClass.m */,
+				0B07066A1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.h */,
+				0B07066B1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m */,
+				0B0706771FC57062000DDC7A /* PayDataModel.h */,
+				0B0706781FC57062000DDC7A /* PayDataModel.m */,
 			);
 			path = PayData;
 			sourceTree = "<group>";
@@ -836,18 +849,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BB912F31FBD4386002829D8 /* CTMediator+AddPayListActions.m in Sources */,
+				0B0706731FC56578000DDC7A /* MyAccounterData.xcdatamodeld in Sources */,
 				0BEC3D351FBABB0E005CC0A7 /* AppDelegate.m in Sources */,
 				0B7E83B21FC2C86100F6970D /* PayTypeListModel.m in Sources */,
-				0BEBAA1F1FBE745F002D5A12 /* PayDataModel.m in Sources */,
 				0BB912F21FBD4386002829D8 /* AddPayListViewController.m in Sources */,
 				0B7E83A81FC2A42800F6970D /* Target_ChoosePayType.m in Sources */,
 				0B7E83AB1FC2A54900F6970D /* PayTypeListView.m in Sources */,
 				0B13644E1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m in Sources */,
 				0B7E839A1FC2926700F6970D /* PayTypeControl.m in Sources */,
 				0B7E83A61FC2A42800F6970D /* ChoosePayTypeViewController.m in Sources */,
+				0B07066C1FC52349000DDC7A /* PayDataEntity+CoreDataClass.m in Sources */,
 				0BB912F41FBD4386002829D8 /* Target_AddPayList.m in Sources */,
 				0BB912B61FBC42FB002829D8 /* CTMediator+TabbarActions.m in Sources */,
 				0BEC3D461FBAC4EC005CC0A7 /* CTMediator.m in Sources */,
+				0B07066D1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m in Sources */,
 				0B407A331FC2672F00AFE74D /* NumKeyboardView.m in Sources */,
 				0BB912B51FBC42FB002829D8 /* TabbarViewController.m in Sources */,
 				0BB912B71FBC42FB002829D8 /* Target_Tabbar.m in Sources */,
@@ -857,6 +872,7 @@
 				0BB912C41FBD218E002829D8 /* CTMediator+HomeActions.m in Sources */,
 				0BEC3D421FBABCDE005CC0A7 /* BaseViewController.m in Sources */,
 				0BB912D21FBD271F002829D8 /* CTMediator+SettingActions.m in Sources */,
+				0B0706791FC57062000DDC7A /* PayDataModel.m in Sources */,
 				0B407A2F1FBED08500AFE74D /* SaveCacheManager.m in Sources */,
 				0B7E83AF1FC2A7B000F6970D /* YLButton.m in Sources */,
 				0B1B4C321FBAA40F001E7450 /* main.m in Sources */,
@@ -1077,6 +1093,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B0706711FC56578000DDC7A /* MyAccounterData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B0706721FC56578000DDC7A /* MyAccounterData.xcdatamodel */,
+			);
+			currentVersion = 0B0706721FC56578000DDC7A /* MyAccounterData.xcdatamodel */;
+			path = MyAccounterData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B1B4C251FBAA40F001E7450 /* Project object */;
 }

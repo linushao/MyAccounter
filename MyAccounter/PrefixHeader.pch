@@ -29,6 +29,7 @@
 
 #import <Masonry.h>
 #import <YYCategories.h>
+#import <MJExtension.h>
 #import <MagicalRecord/MagicalRecord.h>
 
 #import "NotificationKeyHeader.h"

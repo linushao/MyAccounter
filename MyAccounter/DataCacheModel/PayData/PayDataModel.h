@@ -2,37 +2,33 @@
 //  PayDataModel.h
 //  MyAccounter
 //
-//  Created by AceWei on 2017/11/17.
+//  Created by AceWei on 2017/11/22.
 //  Copyright © 2017年 AceWei. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-//#import <YYModel.h>
-#import <CoreData/CoreData.h>
-#import <MJExtension.h>
+#import "Singleton.h"
 
-@interface PayDataModel : NSManagedObject
+@interface PayDataModel : NSObject
+
+singleton_interface(PayDataModel)
 
 /// 商品价格
-@property (nonatomic, assign) double payPrince;
+@property (nonatomic) double payPrince;
+
+/// 记录日期
+@property (nonatomic, copy) NSDate *writeDate;
 
 /// 商品详情
 @property (nonatomic, copy) NSString *payDetail;
 
 /// 最后一次更新日期
-//@property (nonatomic, copy) NSDate *updateDate;
-
-/// 记录日期
-@property (nonatomic, copy) NSDate *writeDate;
+@property (nonatomic, copy) NSDate *updateDate;
 
 /// 商品标签
 @property (nonatomic, copy) NSString *payLabel;
 
-/// 商品ID
-@property (nonatomic, assign) NSInteger payID;
 
-/// 商品save ID
-//@property (nonatomic, copy) NSString *paySaveID;
-
++ (void)attempDealloc;
 
 @end

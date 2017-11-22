@@ -2,7 +2,7 @@
 //  PayDataModel.m
 //  MyAccounter
 //
-//  Created by AceWei on 2017/11/17.
+//  Created by AceWei on 2017/11/22.
 //  Copyright © 2017年 AceWei. All rights reserved.
 //
 
@@ -10,11 +10,17 @@
 
 @implementation PayDataModel
 
-//- (void)encodeWithCoder:(NSCoder *)aCoder { [self yy_modelEncodeWithCoder:aCoder]; }
-//- (id)initWithCoder:(NSCoder *)aDecoder { self = [super init]; return [self yy_modelInitWithCoder:aDecoder]; }
-//- (id)copyWithZone:(NSZone *)zone { return [self yy_modelCopy]; }
-//- (NSUInteger)hash { return [self yy_modelHash]; }
-//- (BOOL)isEqual:(id)object { return [self yy_modelIsEqual:object]; }
-//- (NSString *)description { return [self yy_modelDescription]; }
+singleton_implementation(PayDataModel)
+
+- (void)setUpdateDate:(NSDate *)updateDate
+{
+    _updateDate = [NSDate date];
+}
+
++ (void)attempDealloc
+{
+    onceToken = 0; // 只有置成0,GCD才会认为它从未执行过.它默认为0.这样才能保证下次再次调用shareInstance的时候,再次创建对象.
+    _instance = nil;
+}
 
 @end

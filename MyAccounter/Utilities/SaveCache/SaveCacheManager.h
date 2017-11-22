@@ -12,16 +12,17 @@
 
 #import "Singleton.h"
 #import "PayListKeyHeader.h"
-#import "PayDataModel.h"
+
+#import "PayDataEntity+CoreDataClass.h"
 
 @interface SaveCacheManager : NSObject
 
 singleton_interface(SaveCacheManager)
 
-- (void)savePayDataArray:(NSArray <PayDataModel *> *)arr;
-- (void)addPayData:(PayDataModel *)model;
-- (void)readPayData:(void (^)(PayDataModel *model))completeBlock;
-- (void)deletePayDataByPayID:(NSString *)paySaveID;
+//- (void)savePayDataArray:(NSArray <PayDataEntity *> *)arr;
+- (void)addPayData:(PayDataEntity *)model;
+//- (void)readPayData:(void (^)(PayDataModel *model))completeBlock;
+//- (void)deletePayDataByPayID:(NSString *)paySaveID;
 
 //+ (void)attempDealloc;
 

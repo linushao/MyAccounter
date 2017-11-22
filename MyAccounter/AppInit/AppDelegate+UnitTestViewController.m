@@ -10,7 +10,6 @@
 #import <YYCategories.h>
 #import <YYModel.h>
 
-#import "PayDataModel.h"
 
 @implementation AppDelegate (UnitTestViewController)
 
