@@ -7,8 +7,10 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
+#import "PayDataModel.h"
+
 @interface ChoosePayTypeViewController : BaseViewController
 
-//@property (nonatomic, strong) NSString *payType;
+@property (nonatomic, strong) PayDataModel *model;
 
 @end

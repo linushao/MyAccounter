@@ -20,7 +20,7 @@ target 'MyAccounter' do
   pod 'PNChart', '~> 0.8.9'
   
   pod 'YYCache', '~> 1.0.4'
-  pod 'YYModel', '~> 1.0.4'
+#  pod 'YYModel', '~> 1.0.4'
   pod 'YYCategories', '~> 1.0.4'
   
   pod 'GCDWebServer', '~> 3.4.1'

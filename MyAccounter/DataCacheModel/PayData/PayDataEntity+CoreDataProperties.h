@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 最后一次更新日期
 @property (nullable, nonatomic, copy) NSDate *updateDate;
 
-/// 商品标签
+/// 商品类型
 @property (nullable, nonatomic, copy) NSString *payLabel;
 
 @end

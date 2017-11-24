@@ -8,7 +8,6 @@
 
 #import "AppDelegate+UnitTestViewController.h"
 #import <YYCategories.h>
-#import <YYModel.h>
 
 
 @implementation AppDelegate (UnitTestViewController)

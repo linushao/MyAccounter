@@ -30,7 +30,13 @@
 
 #import "SaveCacheManager.h"
 
+#import "PayDataEntity+CoreDataClass.h"
+#import "PayDataModel.h"
+
 @interface AddPayListViewController ()<UITextFieldDelegate, NumKeyboardViewDelegate>
+
+@property (nonatomic, strong) PayDataModel *model;
+
 
 @property (nonatomic, strong) UITextField *priceTextField;
 @property (nonatomic, strong) UITextField *detailTextField;
@@ -50,6 +56,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (!self.model) {
+        self.model = [[PayDataModel alloc] init];
+    }
+    
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(notificateHandler:) name:NotificatePayTypeKey object:nil];
     
@@ -61,8 +71,10 @@
 - (void)notificateHandler:(NSNotification *)notificate
 {
     if (self.payTypeControl
-        && [notificate.object isKindOfClass:NSString.class]) {
-        self.payTypeControl.descriptionLabel.text = notificate.object;
+        && [notificate.name isEqualToString:NotificatePayTypeKey])
+    {
+        self.model = [PayDataModel mj_objectWithKeyValues:notificate.userInfo];
+        self.payTypeControl.descriptionLabel.text = self.model.payLabel;
     }
 }
 
@@ -222,22 +234,28 @@
     
     PayDataEntity *entity = [PayDataEntity MR_createEntity];
     
-//    [entity mj_setKeyValues:dic];
-    
     entity.payPrince = [self.priceTextField.text doubleValue];
     entity.payDetail = self.detailTextField.text;
     entity.updateDate = [NSDate date];
     entity.writeDate = [NSDate dateWithString:self.timeLabel.text format:@"yyyy年MM月dd日 HH:mm"];
     entity.payLabel = self.payTypeControl.descriptionLabel.text;
     
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+    NSDictionary *dic = [entity mj_keyValues];
+    self.model = [PayDataModel mj_objectWithKeyValues:dic];
+//    NSString *js = [dic mj_JSONString];
+    DLOG(self.model);
+    
+    DLOG([self.model mj_JSONString]);
+    
+//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }];
 }
 
 - (void)choosePayType:(id)btn
 {
-    UIViewController *viewController = [[CTMediator sharedInstance] mediator_ChoosePayTypeViewControllerWithParams:nil];
+    NSDictionary *params = @{@"model": [self.model mj_keyValues]};
+    UIViewController *viewController = [[CTMediator sharedInstance] mediator_ChoosePayTypeViewControllerWithParams:params];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
@@ -251,12 +269,21 @@
 
 - (void)NumKeyboardViewClickKeyboard:(NSString *)value
 {
-    if ([self.priceTextField.text containsString:@"."]
+    NSString *str = self.priceTextField.text;
+    
+    if ([str containsString:@"."]
         && [value containsString:@"."]) {
         return;
     }
     
-    self.priceTextField.text = [self.priceTextField.text stringByAppendingString:value];
+    if ([value containsString:@"X"]) {
+        if (str.length > 0) {
+            self.priceTextField.text = [str substringToIndex:str.length - 1];
+        }
+        return;
+    }
+    
+    self.priceTextField.text = [str stringByAppendingString:value];
 }
 
 

@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyAccounter/AppInit/AppDelegate+UnitTestViewController.m"
-            timestampString = "533014066.924874"
+            timestampString = "533112314.85287"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-unitTestHomeViewController"
             landmarkType = "7">
          </BreakpointContent>
@@ -99,22 +99,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyAccounter/MVC/ChoosePayType/Controllers/ChoosePayTypeViewController.m"
-            timestampString = "532862632.182861"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-sureButtonEvent:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
             timestampString = "532948132.3705"
             startingColumnNumber = "9223372036854775807"
@@ -131,12 +115,44 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyAccounter/MVC/AddPayList/Controllers/AddPayListViewController.m"
-            timestampString = "533036762.058603"
+            filePath = "MyAccounter/MVC/ChoosePayType/Controllers/ChoosePayTypeViewController.m"
+            timestampString = "533118825.038032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-sureButtonEvent:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyAccounter/MVC/AddPayList/Controllers/AddPayListViewController.m"
+            timestampString = "533117214.520537"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-notificateHandler:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyAccounter/MVC/AddPayList/Controllers/AddPayListViewController.m"
+            timestampString = "533189757.6843"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "-saveDataEvent:"
             landmarkType = "7">
          </BreakpointContent>

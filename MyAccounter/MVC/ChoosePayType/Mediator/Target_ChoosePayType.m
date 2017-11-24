@@ -21,6 +21,10 @@
             ChoosePayTypeVC.<#model#> = params[@"<#model#>"];
         }
      */
+    
+    if ([params valueForKey:@"model"]) {
+        ChoosePayTypeVC.model = [PayDataModel mj_objectWithKeyValues:params[@"model"]];
+    }
 
     return ChoosePayTypeVC;
 }

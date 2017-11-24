@@ -11,6 +11,17 @@
 
 @implementation PayTypeListView
 
+
++ (instancetype)createWithPayLabelIndex:(NSInteger)index
+{
+    PayTypeListView *view = [[PayTypeListView alloc] init];
+    
+    view.payLabelIndex = index;
+    
+    return view;
+}
+
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -28,7 +39,7 @@
     NSArray *arr = [PayTypeListView readJSON2Array];
     
     
-    for (NSInteger i=0; i<17; i++) {
+    for (NSInteger i=0; i<arr.count; i++) {
         YLButton *btn = [YLButton buttonWithType:UIButtonTypeRoundedRect];
         [self addSubview:btn];
         
@@ -39,9 +50,9 @@
             make.left.offset(w*(i%6));
         }];
         
-        if (i == self.payTypeIndex) {
+        if (i == self.payLabelIndex) {
             btn.backgroundColor = [UIColor colorWithRGB:0x448EB2];
-            self.payType = arr[i];
+            self.payLabel = arr[i];
         }
         
         
@@ -60,8 +71,8 @@
                 }
             }
             
-            weak_self.payTypeIndex = sender.tag;
-            weak_self.payType = arr[sender.tag];
+            weak_self.payLabelIndex = sender.tag;
+            weak_self.payLabel = arr[sender.tag];
             
             sender.backgroundColor = [UIColor colorWithRGB:0x448EB2];
             

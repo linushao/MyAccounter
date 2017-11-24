@@ -19,9 +19,13 @@
 @property (nonatomic, weak) id<PayTypeListViewDelegate> delegate;
 
 /// 选择的类型下标
-@property (nonatomic, assign) NSInteger payTypeIndex;
+@property (nonatomic, assign) NSInteger payLabelIndex;
 /// 选择的类型
-@property (nonatomic, strong) NSString *payType;
+@property (nonatomic, strong) NSString *payLabel;
+
+
+/// 创建带有下标的对象
++ (instancetype)createWithPayLabelIndex:(NSInteger)index;
 
 /// 读取配置列表文件
 + (NSArray *)readJSON2Array;

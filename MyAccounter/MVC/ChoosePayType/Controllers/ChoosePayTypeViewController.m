@@ -18,7 +18,7 @@
 
 
 #import "ChoosePayTypeViewController.h"
-#import <YYModel.h>
+#import "PayDataModel.h"
 
 //#import "CTMediator+<#ActionName#>Actions.h"
 
@@ -58,7 +58,7 @@
     @weakify(self);
     
     if (!self.listView) {
-        self.listView = [[PayTypeListView alloc] init];
+        self.listView = [PayTypeListView createWithPayLabelIndex:self.model.payTypeIndex];
     }
     
     if (![self.view isDescendantOfView:self.listView]) {
@@ -103,10 +103,18 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
     
-    DLOG(@(self.listView.payTypeIndex));
+    DLOG(@(self.listView.payLabelIndex));
     
+    
+    
+    PayDataModel *model = [[PayDataModel alloc] init];
+    model.payLabel = self.listView.payLabel;
+    model.payTypeIndex = self.listView.payLabelIndex;
+
+    NSDictionary *dic = [model mj_JSONObject];
+
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    [center postNotificationOnMainThreadWithName:NotificatePayTypeKey object:self.listView.payType];
+    [center postNotificationOnMainThreadWithName:NotificatePayTypeKey object:nil userInfo:dic];
 }
 
 

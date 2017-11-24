@@ -10,7 +10,7 @@
 		0B07066C1FC52349000DDC7A /* PayDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0706691FC52349000DDC7A /* PayDataEntity+CoreDataClass.m */; };
 		0B07066D1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B07066B1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m */; };
 		0B0706731FC56578000DDC7A /* MyAccounterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B0706711FC56578000DDC7A /* MyAccounterData.xcdatamodeld */; };
-		0B0706791FC57062000DDC7A /* PayDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0706781FC57062000DDC7A /* PayDataModel.m */; };
+		0B07067F1FC6B5BF000DDC7A /* PayDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B07067E1FC6B5BF000DDC7A /* PayDataModel.m */; };
 		0B13644E1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */; };
 		0B1B4C321FBAA40F001E7450 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B4C311FBAA40F001E7450 /* main.m */; };
 		0B1B4C401FBAA410001E7450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1B4C3E1FBAA410001E7450 /* LaunchScreen.storyboard */; };
@@ -64,8 +64,8 @@
 		0B07066A1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayDataEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
 		0B07066B1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PayDataEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		0B0706721FC56578000DDC7A /* MyAccounterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAccounterData.xcdatamodel; sourceTree = "<group>"; };
-		0B0706771FC57062000DDC7A /* PayDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDataModel.h; sourceTree = "<group>"; };
-		0B0706781FC57062000DDC7A /* PayDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDataModel.m; sourceTree = "<group>"; };
+		0B07067D1FC6B5BF000DDC7A /* PayDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDataModel.h; sourceTree = "<group>"; };
+		0B07067E1FC6B5BF000DDC7A /* PayDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDataModel.m; sourceTree = "<group>"; };
 		0B13644C1FBD62A9006439A0 /* AppDelegate+UnitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UnitTestViewController.h"; sourceTree = "<group>"; };
 		0B13644D1FBD62AA006439A0 /* AppDelegate+UnitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UnitTestViewController.m"; sourceTree = "<group>"; };
 		0B1B4C2D1FBAA40F001E7450 /* MyAccounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAccounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -463,6 +463,8 @@
 		0BB912F01FBD4385002829D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0B07067D1FC6B5BF000DDC7A /* PayDataModel.h */,
+				0B07067E1FC6B5BF000DDC7A /* PayDataModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -511,8 +513,6 @@
 				0B0706691FC52349000DDC7A /* PayDataEntity+CoreDataClass.m */,
 				0B07066A1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.h */,
 				0B07066B1FC52349000DDC7A /* PayDataEntity+CoreDataProperties.m */,
-				0B0706771FC57062000DDC7A /* PayDataModel.h */,
-				0B0706781FC57062000DDC7A /* PayDataModel.m */,
 			);
 			path = PayData;
 			sourceTree = "<group>";
@@ -872,11 +872,11 @@
 				0BB912C41FBD218E002829D8 /* CTMediator+HomeActions.m in Sources */,
 				0BEC3D421FBABCDE005CC0A7 /* BaseViewController.m in Sources */,
 				0BB912D21FBD271F002829D8 /* CTMediator+SettingActions.m in Sources */,
-				0B0706791FC57062000DDC7A /* PayDataModel.m in Sources */,
 				0B407A2F1FBED08500AFE74D /* SaveCacheManager.m in Sources */,
 				0B7E83AF1FC2A7B000F6970D /* YLButton.m in Sources */,
 				0B1B4C321FBAA40F001E7450 /* main.m in Sources */,
 				0BB912C51FBD218E002829D8 /* Target_Home.m in Sources */,
+				0B07067F1FC6B5BF000DDC7A /* PayDataModel.m in Sources */,
 				0BB912D11FBD271F002829D8 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
